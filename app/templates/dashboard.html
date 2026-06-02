@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Smart Kitchen Garden{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+    <h1>Your Garden Dashboard</h1>
+    
+    <div class="dashboard-grid">
+        <div class="dashboard-card">
+            <h2>Quick Stats</h2>
+            <div class="stats">
+                <div class="stat">My Plants: <strong>0</strong></div>
+                <div class="stat">Growing: <strong>0</strong></div>
+                <div class="stat">Harvested: <strong>0</strong></div>
+            </div>
+        </div>
+
+        <div class="dashboard-card">
+            <h2>Today's Tasks</h2>
+            <div class="tasks-list">
+                <p>No tasks scheduled for today</p>
+            </div>
+        </div>
+
+        <div class="dashboard-card full-width">
+            <h2>My Garden</h2>
+            <p>Start by selecting a plant and adding it to your garden!</p>
+            <a href="{{ url_for('main.plants') }}" class="btn btn-primary">Add Plant</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
